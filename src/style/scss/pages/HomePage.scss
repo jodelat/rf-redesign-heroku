@@ -1,0 +1,208 @@
+@mixin cover-view($View-Style) {
+  @each $elem, $style in $View-Style {
+    #{$elem} {
+      @each $attrib, $value in $style {
+        #{$attrib}: $value;
+      }
+    }
+  }
+}
+
+#home {
+  //Common to all devices
+  @include media-breakpoint-up(xs) {
+    #social-radio, #prod-services {
+      .mask-content {
+        position: absolute;
+        bottom: 0;
+        a {
+          color: #f6a623;
+        }
+      }
+    }
+    #social-radio {
+      $views: ("#powering_music_sports .mask": (background-color: rgba(5, 8, 117, 0.5)),
+              "#powering_brands .mask":(background-color: rgba(20, 59, 252, 0.5)),
+              "#powering_education .mask":(background-color: rgba(91, 123, 49, 0.5)),
+              ".view":(height: 100%));
+      @include cover-view($views);
+    }
+    #word-art {
+      background-color: #e0e350;
+      opacity: 0.35;
+    }
+    #radioflag-banner {
+      button {
+        border-radius: 4.8px;
+      }
+      .mask-content {
+        top: 45%;
+        bottom: 0;
+        position: absolute;
+        right: 2%;
+        div {
+          position: relative;
+          top: -80%;
+          p {
+            font-size: get-vw(14px);
+            letter-spacing: get-vw(0.5px);
+          }
+          h4 {
+            letter-spacing: get-vw(0.6px);
+          }
+        }
+      }
+    }
+
+  }
+
+  //phones and tablets portrait
+  @include media-breakpoint-down(sm) {
+    .phone-touch-div {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      z-index: 2;
+    }
+    #intro {
+      .mask-content {
+        p {
+          font-size: get-vw(20px);
+        }
+      }
+    }
+    #prod-services {
+      .mask-content {
+        top: 50%;
+        div {
+          position: relative;
+          top: -50%;
+          padding-left: 5vw;
+          line-height: 1;
+          p:nth-child(1) {
+            font-size: get-vw(22px);
+            font-weight: 200;
+            letter-spacing: 1.5vw;
+          }
+          p:nth-child(2) {
+            font-size: get-vw(23px);
+            font-weight: bold;
+            letter-spacing: 3.5px;
+          }
+          p:nth-child(3) {
+            font-size: get-vw(24px);
+            font-weight: 300;
+            line-height: 1.86;
+          }
+        }
+      }
+    }
+    #social-radio {
+      div {
+        padding: 0;
+        h4 {
+          padding: get-vw(0px) get-vw(10px);
+        }
+        .mask-content {
+          padding-left: get-vw(14px);
+          padding-bottom: get-vw(10px);
+          p:nth-child(1) {
+            font-size: get-vw(30px);
+            letter-spacing: 6.2px;
+            font-family: Montserrat;
+            margin: 0px;
+          }
+          p:nth-child(2) {
+            font-size: get-vw(26px);
+            letter-spacing: 0.9px;
+            font-family: montserrat-normal;
+          }
+        }
+      }
+    }
+    #our-vision {
+      iframe {
+        width: 100%;
+        height: 50vw;
+      }
+    }
+  }
+
+  //tablets landscapes and desktops
+  @include media-breakpoint-up(md) {
+    /*#intro {
+      .banner-bg {
+        height: 100vh;
+        width: 100vw;
+        min-height: get-vw(515px);
+      }
+    }*/
+
+    #prod-services {
+      $views: ("#for_listeners .mask": (background-color: rgba(71, 38, 176, 0.5)),
+              "#for_djs .mask":(background-color: rgba(5, 99, 117, 0.5)),
+              "#for_artists .mask":(background-color: rgba(226, 68, 213, 0.5))
+      );
+      @include cover-view($views);
+
+    }
+
+    #social-radio, #prod-services {
+      & > h4 {
+        padding: 1% 0%;
+      }
+      .mask-content {
+        background-image: linear-gradient(to bottom, rgba(33, 41, 67, 0.0), #212943);
+        width: 100%;
+        padding-bottom: get-vw(12px);
+        padding-left: get-vw(25px);
+        p, a {
+          margin: 0;
+          padding: 0;
+        }
+        p:nth-child(1) {
+          font-size: get-vw(12px);
+          line-height: 1.22;
+          letter-spacing: get-vw(8px);
+        }
+        p:nth-child(2) {
+          font-size: get-vw(20px);
+          letter-spacing: get-vw(3px);
+          line-height: 1.22;
+        }
+        p:nth-child(3) {
+          font-size: get-vw(11px);
+          a:hover {
+            font-family: montserrat-light;
+          }
+        }
+      }
+    }
+    #our-vision {
+      padding: 3vh 8vw;
+      h4 {
+        text-align: left;
+      }
+      .col:nth-child(1) {
+        padding: 1vw;
+        h5 {
+          font-family: montserrat-thin;
+          font-size: 2vw;
+          color: #9cafc3 !important;
+        }
+        p {
+          font-family: montserrat-extralight;
+          font-size: 1vw;
+          line-height: 1.61;
+          padding: 3% 5% 3% 0%;
+        }
+      }
+      iframe {
+        height: 100%;
+        width: 90%;
+        margin-left: 10%;
+      }
+    }
+  }
+
+}

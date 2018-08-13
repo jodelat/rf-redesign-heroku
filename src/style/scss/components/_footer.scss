@@ -1,0 +1,138 @@
+@include media-breakpoint-up(xs) {
+    footer {
+        form {
+            text-align: left;
+            input[type='text'],
+            input[type='password'],
+            input[type='email'] {
+                border-radius: 4px;
+                background-color: #000000;
+                border: solid 1px #979797;
+                margin: auto;
+                padding: 2px 15px;
+            }
+            input[type='text']:focus:not([readonly]),
+            input[type='password']:focus:not([readonly]),
+            input[type='email']:focus:not([readonly]) {
+                background-color: #000000;
+            }
+        }
+
+        .footer-social {
+            .fa:hover {
+                opacity: 0.5;
+                filter: alpha(opacity=50);
+                cursor: pointer;
+            }
+            .fa-stack {
+                font-size: 1.2rem;
+                line-height: 2.1em;
+                margin: 0.3rem;
+            }
+            .fa-google-plus {
+                color: #f24033;
+            }
+            .fa-google-plus.fa-circle-thinner:before {
+                border: 2px solid #f24033;
+            }
+            .fa-facebook-f {
+                color: #43619c;
+            }
+            .fa-facebook-f.fa-circle-thinner:before {
+                border: 2px solid #43619c;
+            }
+            .fa-linkedin {
+                color: #187fb8;
+            }
+            .fa-linkedin.fa-circle-thinner:before {
+                border: 2px solid #187fb8;
+            }
+            .fa-twitter {
+                color: #24a9e6;
+            }
+            .fa-twitter.fa-circle-thinner:before {
+                border: 2px solid #24a9e6;
+            }
+            .fa-instagram {
+                color: #2a5b83;
+            }
+            .fa-instagram.fa-circle-thinner:before {
+                border: 2px solid #2a5b83;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    footer {
+        form {
+            text-align: center;
+            input[type='text'],
+            input[type='password'],
+            input[type='email'] {
+                margin: 10px 0px 10px -15px !important;
+            }
+        }
+        .view .mask {
+            position: initial;
+        }
+        .mask a {
+            color: #4a90e2 !important;
+        }
+        .mask a:hover {
+            text-decoration: underline !important;
+        }
+        .register:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    footer {
+        button {
+            @include media-breakpoint-between(sm, md) {
+                padding: 12px !important;
+            }
+        }
+        position: relative;
+        & > .footer-social:not(.fixed-bottom) {
+            background: url(/img/oval-shape.png) no-repeat;
+            position: absolute;
+            background-size: cover;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            height: get-vw(90px);
+            & > div {
+                line-height: 150px;
+            }
+            a {
+                color: #96abba;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+        }
+        .mask a {
+            color: #4a90e2 !important;
+        }
+        .mask a:hover {
+            text-decoration: underline !important;
+        }
+        .register:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.fa-circle-thinner:before {
+    box-sizing: border-box;
+    display: block;
+    margin: 0.2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding-top: 0.65em;
+    text-align: center;
+    border-radius: 100%;
+}

@@ -1,0 +1,66 @@
+@import '../vars/colors';
+
+.sub-header {
+  color: #FFF;
+  display: flex;
+  align-items: center;
+  background-color: #000;
+  font-size: 20px;
+  height: 40px;
+}
+
+.sub-header-desc {
+  margin-left: 20px;
+}
+
+.sub-edit-wrapper, .delete-tag-wrapper, .add-tag {
+  cursor: pointer;
+}
+
+.sub-edit-wrapper {
+  position: absolute;
+  right: 0;
+  display: flex;
+  float: right;
+  margin-right: 20px;
+
+  i {
+    padding: 10px;
+    color: $dodgerblue;
+  }
+}
+
+.sub-tags {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tag {
+  display: flex;
+  padding: 15px;
+  background-color: $dodgerblue;
+  color: #FFF;
+  margin: 10px;
+  font-size: 20px;
+}
+
+.delete-tag-wrapper {
+  margin-left: 10px;
+}
+
+.modify {
+  cursor: pointer;
+
+  &.add {
+    color: $green;
+  }
+
+  &.delete {
+    color: $red;
+  }
+}
+
+.sub-page .search-results {
+  margin-bottom: 30px;
+}

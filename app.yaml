@@ -1,0 +1,59 @@
+#This is the latest version1
+application: radioflag2
+version: 0-6-02-homepage-uv2 #bs4 update
+#0-6-02-homepage-uv1   bs -3 update
+runtime: python27
+api_version: 1
+threadsafe: yes
+auto_id_policy: legacy
+
+# The length of time a static file served by a static file handler ought to be cached in the user's browser
+default_expiration: "0d 0h 0s"
+
+builtins:
+- remote_api: on
+- appstats: on
+- deferred: on
+
+handlers:
+
+# Static files
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+- url: /img
+  static_dir: dist/img
+- url: /fonts
+  static_dir: dist/fonts
+- url: /plugins
+  static_dir: dist/plugins
+
+
+- url: /style.css
+  static_files: dist/style.css
+  upload: dist/style\.css
+
+- url: /(.*\.(js|woff2|ttf|eot|woff|svg|otf))$
+  static_files: dist/\1
+  upload: dist/.*\.(js|woff2|ttf|eot|woff|svg|otf)$
+
+- url: /
+  static_files: dist/index.html
+  upload: dist/index\.html
+
+skip_files:
+- ^(.*/)?app\.yaml
+- ^(.*/)?index\.yaml
+- ^(.*/)?.*~
+- ^(.*/)?\..*
+- ^(.*/)?.*\.py[co]
+- ^(.*/)?node_modules/.*
+
+#libraries:
+#- name: webapp2
+#  version: "2.5.2"

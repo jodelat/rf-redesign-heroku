@@ -1,0 +1,36 @@
+.sweetalert .swal-footer {
+    text-align: center;
+}
+
+#signin_modal {
+    .modal-header {
+        h4.modal-title {
+            color: white;
+            font-size: 16px;
+            border-bottom: 1px solid #df6866;
+        }
+        .close {
+            padding: 15px;
+            margin: -47px -40px -15px auto;
+            font-size: 80px;
+        }
+    }
+    .modal-body {
+        a:hover {
+            color: #fff;
+        }
+    }
+}
+
+#auth_modal {
+    .modal-body {
+        .form-group {
+            input {
+                background-color: transparent !important;
+            }
+        }
+        a:hover {
+            color: #fff;
+        }
+    }
+}

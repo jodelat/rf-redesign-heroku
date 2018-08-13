@@ -1,0 +1,22 @@
+@import '../vars/colors';
+
+.profile-card {
+  .profile-card-data {
+    margin-top: 8px;
+
+    .title {
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .subtitle {
+      font-size: 12px;
+      margin-top: 5px;
+    }
+  }
+}
+
+.users .profile-card {
+  height: 200px;
+}
+

@@ -1,0 +1,15 @@
+.content-container {
+  .btn.active {
+    box-shadow: none !important;
+    border-left: 8px #8e44ad solid !important;
+    -moz-transition: none;
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
+  }
+
+  .btn {
+    background-color: rgba(164, 190, 223, 0.1);
+    color: rgba(255, 255, 255, 0.31) !important;
+  }
+}

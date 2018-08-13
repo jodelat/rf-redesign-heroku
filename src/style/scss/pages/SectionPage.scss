@@ -1,0 +1,5 @@
+@include media-breakpoint-down(md) {
+  h4 {
+    font-size: get-vw(28px);
+  }
+}

@@ -1,0 +1,151 @@
+@import '../vars/colors';
+
+.search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-form {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: $aubergine;
+  padding: 10px;
+  flex-direction: column;
+  color: #FFF;
+}
+
+.search-upper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-icon-wrapper {
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.search-icon {
+  margin-left: 10px;
+  font-size: 22px;
+  color: $icon-dark;
+  position: relative;
+  bottom: 4px;
+}
+
+.search-input {
+  background-color: $aubergine;
+  width: 100%;
+  color: #FFF;
+  border-top: 0;
+  border-right: 0;
+  border-left: 2px solid $cello;
+  border-bottom: 2px solid $cello;
+  padding: 10px;
+  height: 35px;
+  font-size: 20px;
+}
+
+.search-radios {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-type-radio {
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 15px;
+
+  input {
+    margin-right: 5px;
+  }
+}
+
+.search-results {
+  margin-top: 20px;
+  width: 100%;
+
+  .desc-parent-area {
+    width: 300px;
+  }
+}
+
+.cards {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  background-color: $searchResultsBg;
+  padding: 10px;
+}
+
+.card {
+  margin-bottom: 30px;
+  padding: 5px;
+  margin: 10px;
+  //flex-grow: 1;
+  border-radius: 5;
+}
+
+.search-results-header {
+  background-color: $title-bar-blue;
+  color: #FFF;
+  font-size: 20px;
+  padding: 5px 20px 5px 20px;
+}
+
+.login {
+  color: #FFF;
+}
+
+.search-popover {
+  background-color: #FFF;
+  border-radius: 5px;
+  padding: 8px 0 8px 0;
+}
+
+.search-popover-option {
+  cursor: pointer;
+}
+
+.search-popover-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: $aubergine;
+  padding: 0 8px 0 8px;
+  .search-popover-separator {
+    padding: 0 5px;
+    color: $dodgerblue;
+  }
+  &:hover {
+    background-color: $dodgerblue;
+    .search-popover-separator {
+      color: #FFF;
+    }
+  }
+}
+
+.search-popover-label {
+  font-weight: bold;
+}
+
+.Popover-tipShape {
+  fill: #FFF;
+}
+
+.search-popover-hidden {
+  position: relative;
+  top: 25px;
+  left: 15px;
+}

@@ -1,0 +1,11 @@
+/* Convert Pixel to VW */
+@function get-vw($object) {
+  $vw: (1024 * 0.01) * 1px;
+  @return ($object / $vw) * 1vw;
+}
+
+/* Convert Pixel to VH */
+@function get-vh($object) {
+  $vh: (768 * 0.01) * 1px;
+  @return ($object / $vh) * 1vh;
+}

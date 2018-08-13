@@ -1,0 +1,56 @@
+@import '../vars/colors';
+
+.flag-card {
+  margin: 10px;
+  box-shadow: 6px 6px 3px grey;
+  height: 10pc;
+  .card-wrapper {
+    height: 80%;
+    width: 100%;
+    position: relative;
+    flex-direction: row;
+    display: flex;
+    .thumbnail {
+      padding: 0px;
+      display: inline-block;
+      flex: 0.4;
+      margin: 0px;
+      border: none;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
+      }
+    }
+    .detail {
+      padding: 5px 5px 5px 10px;
+      display: inline-block;
+      flex: 1;
+      background-color: $card-bg;
+    }
+
+  }
+  .options-wrapper {
+    hieght: 20%;
+    width: 100%;
+    position: relative;
+    flex-direction: row;
+    display: flex;
+    background-color: $gainsboro;
+    .username {
+      flex: 1;
+    }
+    .options {
+      flex: 0.4;
+      font-size: 25px;
+      color: $icon-light;
+      background-color: $icon-dark;
+      text-align: center;
+      .fa-comment {
+        margin-right: 38px;
+      }
+    }
+  }
+}
+
+
